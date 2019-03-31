@@ -65,6 +65,7 @@ RUN echo postfix postfix/main_mailer_type string "'Internet Site'" | debconf-set
         libswitch-perl                      \
         libwww-perl                         \
         m4                                  \
+        nano                                \
         netcat                              \
         parallel                            \
         php-cli                             \

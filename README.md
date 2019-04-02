@@ -62,3 +62,34 @@ The default credentials for the web interface is `nagiosadmin` / `nagios`
 * JE-Nagios-Plugins -  custom plugins from Justin Ellison [<https://github.com/justintime/nagios-plugins>]
 
 
+#
+
+### Students zone
+#### Run the below commands:
+    
+    
+    $ git clone https://github.com/Dgotlieb/Docker-Nagios.git
+    $ cd Docker-Nagios
+### For Mac / Linux
+    $ docker run --name nagios -v $(pwd)/NagiosDocker/servers/:/etc/nagios/servers/ -p 0.0.0.0:8888:80 jasonrivers/nagios:latest
+### For Windows
+    $ docker run --name nagios -v /c/Users/<path_to_Nagios_Docker_Folder>/Docker-Nagios/NagiosDocker/servers/:/etc/nagios/servers/ -p 0.0.0.0:8888:80 jasonrivers/nagios:latest
+
+### Continuing...
+    $ docker ps
+    $ docker exec -it <container_id> bin/bash
+    $ apt update && apt install nano
+    $ nano /opt/nagios/etc/nagios.cfg
+### Add the below lines to the file:
+    $ cfg_file=/etc/nagios/servers/google.cfg
+    $ cfg_file=/etc/nagios/servers/github.cfg
+    
+### Enter the docker host address:
+For Docker toolbox users: 192.168.99.100:8888
+For Docker for Windwos/Mac localhost:8888
+
+    Username : nagiosadmin
+    Password: nagios
+(Can be changed from opt/nagios/etc/cgi.cfg)
+
+### On left panel go to: System => process info => restart nagios => commit => back to hosts

@@ -64,7 +64,7 @@ The default credentials for the web interface is `nagiosadmin` / `nagios`
 
 #
 
-### Students zone
+## Students zone
 #### Run the below commands:
     
     

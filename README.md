@@ -77,7 +77,7 @@ The default credentials for the web interface is `nagiosadmin` / `nagios`
 
 ### Continuing...
     $ docker ps
-    $ docker exec -it <container_id> bin/bash
+    $ docker exec -it nagios bin/bash
     $ apt update && apt install nano
     $ nano /opt/nagios/etc/nagios.cfg
 ### Add the below lines to the file:
